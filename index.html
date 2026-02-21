@@ -13,6 +13,39 @@
 function toggleMenu() {
   document.getElementById("mobileMenu").classList.toggle("hidden");
 }
+function toggleSubmenu() {
+  const el = document.getElementById("mobileServicesSubmenu");
+  const btn = document.getElementById("mobileServicesToggleBtn");
+  const icon = document.getElementById("mobileServicesToggleIcon");
+  if (!el || !btn) return;
+
+  const isOpen = btn.getAttribute('aria-expanded') === 'true';
+  if (isOpen) {
+    // collapse
+    el.style.maxHeight = el.scrollHeight + 'px';
+    // force reflow then collapse to 0
+    void el.offsetHeight;
+    el.style.maxHeight = '0px';
+    btn.setAttribute('aria-expanded', 'false');
+    if (icon) icon.classList.remove('rotate-180');
+    // after transition, keep it hidden for screen readers
+    el.addEventListener('transitionend', function handler() {
+      el.classList.add('sr-only');
+      el.removeEventListener('transitionend', handler);
+    });
+  } else {
+    // expand
+    el.classList.remove('sr-only');
+    el.style.maxHeight = el.scrollHeight + 'px';
+    btn.setAttribute('aria-expanded', 'true');
+    if (icon) icon.classList.add('rotate-180');
+    // remove inline max-height after animation so it can reflow naturally
+    el.addEventListener('transitionend', function handler() {
+      el.style.maxHeight = '';
+      el.removeEventListener('transitionend', handler);
+    });
+  }
+}
 </script>
 
 <script id="tailwind-config">
@@ -72,13 +105,10 @@ to { width: 100%; }
 <header class="fixed top-0 w-full z-50 bg-white border-b border-gray-100">
 <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
-<div class="flex items-center gap-2">
-<div class="w-8 h-8 bg-black flex items-center justify-center rounded">
-<span class="text-white font-bold text-xl">N</span>
-</div>
-<span class="text-xl font-bold tracking-tight text-black">
-Sure <span class="text-primary">Services</span>
-</span>
+<div class="flex items-center gap-3">
+  <div class="flex items-center gap-3">
+    <img src="Images/websiteLogo.png" alt="N Sure Services" class="h-20 w-auto"/>
+  </div>
 </div>
 
 <nav class="hidden md:flex items-center gap-8">
@@ -122,7 +152,21 @@ Get Started
 <div class="flex flex-col p-6 space-y-4">
 <a class="text-sm font-medium text-black" href="index.html">Home</a>
 <a class="text-sm font-medium text-black" href="about.html">About</a>
-<a class="text-sm font-medium text-black" href="services.html">Services</a>
+<!-- Mobile Services with collapsible submenu -->
+<div>
+  <button id="mobileServicesToggleBtn" type="button" onclick="toggleSubmenu()" aria-expanded="false" aria-controls="mobileServicesSubmenu" class="w-full flex items-center justify-between text-sm font-medium text-black">
+    <span>Services</span>
+    <span id="mobileServicesToggleIcon" class="material-symbols-outlined text-sm transform transition-transform duration-300">expand_more</span>
+  </button>
+  <div id="mobileServicesSubmenu" class="sr-only overflow-hidden transition-[max-height] duration-300 ease-in-out flex flex-col pl-4 space-y-2 mt-2">
+    <a class="text-sm font-medium text-black" href="DetailService1.html">Temporary Staffing</a>
+    <a class="text-sm font-medium text-black" href="DetailService2.html">Recruitment Process Outsourcing (RPO)</a>
+    <a class="text-sm font-medium text-black" href="DetailService4.html">Pre-Placement Offer (PPO) Recruitment</a>
+    <a class="text-sm font-medium text-black" href="DetailService6.html">Talent Mapping and Market Intelligence</a>
+    <a class="text-sm font-medium text-black" href="DetailService3.html">Contract Staffing</a>
+    <a class="text-sm font-medium text-black" href="DetailService5.html">HR Consulting and Strategy</a>
+  </div>
+</div>
 <a class="text-sm font-medium text-black" href="industries.html">Industries</a>
 <a class="text-sm font-medium text-black" href="blog.html">Blog</a>
 <a class="text-sm font-medium text-black" href="contact.html">Contact</a>
@@ -240,15 +284,18 @@ Streamlining your workforce with precision and care to help you scale efficientl
     
     <!-- Logo + About -->
     <div>
-      <div class="flex items-center gap-2 mb-6">
-        <div class="w-8 h-8 bg-white rounded flex items-center justify-center">
-          <span class="text-background-dark font-bold text-lg">N</span>
-        </div>
-        <span class="text-lg font-bold text-white uppercase">Sure Services</span>
-      </div>
+      <div class="flex items-center gap-3">
+  <div class="flex items-center gap-3">
+    
+    <img src="Images/websiteLogo2.png" alt="N Sure Services" class="h-20 w-auto"/>
+    
+   
 
-      <p class="text-muted-gray text-sm leading-relaxed mb-6">
-        Expert HR consultancy tailored for modern businesses. Helping you grow through your greatest asset: your people.
+  </div>
+</div>
+
+      <p class="text-muted-gray text-sm leading-relaxed mb-4">
+        “Connecting Talent in Opportunity, your path to Success”
       </p>
 
       <!-- Social Icons -->
@@ -301,33 +348,48 @@ Streamlining your workforce with precision and care to help you scale efficientl
     <div>
       <h4 class="font-bold mb-6 text-white">Office</h4>
       <ul class="space-y-4 text-muted-gray text-sm">
-        <li>
-          123 Professional Way,<br/>
-          Business District,<br/>
-          Singapore 018960
-        </li>
-        <li class="text-white font-medium">
-          +1 (555) 000-1234
-        </li>
+         <li>
+      <a href="https://maps.google.com/?q=DD Puram Bareilly Uttar Pradesh 243122"
+         target="_blank"
+         class="hover:text-white transition-colors">
+        DD Puram (Deen Dayal Puram),<br>
+        Bareilly, Uttar Pradesh 243122
+      </a>
+    </li>
+
+    <li>
+      <a href="mailto:Suryansure@outlook.com"
+         class="hover:text-white transition-colors">
+        Suryansure@outlook.com
+      </a>
+    </li>
+
+    <li>
+      <a href="tel:+918171548322"
+         class="hover:text-white transition-colors">
+        +91 81715 48322
+      </a>
+    </li>
+
       </ul>
     </div>
 
   </div>
 
-  <!-- Bottom White Section -->
-  <div class="w-full bg-white mt-20">
-    <div class="max-w-7xl mx-auto py-8 flex flex-col md:flex-row justify-between items-center gap-6 text-black text-xs font-semibold uppercase tracking-widest">
-      
-      <p>© 2024 N Sure Services. All rights reserved.</p>
+<!-- Bottom Black Section -->
+<div class="w-full bg-black mt-20">
+  <div class="max-w-7xl mx-auto py-8 flex flex-col md:flex-row justify-between items-center gap-6 text-white text-xs font-semibold uppercase tracking-widest">
+    
+    <p>© 2010 N Sure Services. All rights reserved.</p>
 
-      <div class="flex gap-8">
-        <a class="hover:text-accent-blue transition-colors" href="privacy.html">Privacy Policy</a>
-        <a class="hover:text-accent-blue transition-colors" href="terms.html">Terms of Service</a>
-        <a class="hover:text-accent-blue transition-colors" href="cookies.html">Cookie Policy</a>
-      </div>
-
+    <div class="flex gap-8">
+      <a class="hover:text-accent-blue transition-colors" href="privacy.html">Privacy Policy</a>
+      <a class="hover:text-accent-blue transition-colors" href="terms.html">Terms of Service</a>
+      <a class="hover:text-accent-blue transition-colors" href="cookies.html">Cookie Policy</a>
     </div>
+
   </div>
+</div>
 
 </footer>
 

@@ -130,7 +130,26 @@ function toggleMenu() {
     <div class="flex flex-col p-6 space-y-4 text-sm font-semibold text-slate-700">
       <a href="index.html" class="hover:text-primary">Home</a>
       <a href="about.html" class="hover:text-primary">About</a>
-      <a href="#" class="text-primary font-bold">Services</a>
+      <!-- Collapsible Services submenu -->
+      <div>
+        <button id="mobileServicesToggleBtn" type="button" onclick="(function(){
+            const el=document.getElementById('mobileServicesSubmenu');
+            const btn=document.getElementById('mobileServicesToggleBtn');
+            const icon=document.getElementById('mobileServicesToggleIcon');
+            if(!el||!btn) return;
+            const open = btn.getAttribute('aria-expanded')==='true';
+            if(open){ el.style.maxHeight = el.scrollHeight+'px'; void el.offsetHeight; el.style.maxHeight='0px'; btn.setAttribute('aria-expanded','false'); if(icon) icon.classList.remove('rotate-180'); el.addEventListener('transitionend',function h(){ el.classList.add('sr-only'); el.removeEventListener('transitionend',h); }); }
+            else { el.classList.remove('sr-only'); el.style.maxHeight = el.scrollHeight+'px'; btn.setAttribute('aria-expanded','true'); if(icon) icon.classList.add('rotate-180'); el.addEventListener('transitionend',function h(){ el.style.maxHeight=''; el.removeEventListener('transitionend',h); }); }
+        })()" aria-expanded="false" aria-controls="mobileServicesSubmenu" class="w-full flex items-center justify-between text-sm font-medium text-slate-700">Services <span id="mobileServicesToggleIcon" class="material-symbols-outlined text-sm transform transition-transform duration-300">expand_more</span></button>
+        <div id="mobileServicesSubmenu" class="sr-only overflow-hidden transition-[max-height] duration-300 ease-in-out flex flex-col pl-4 space-y-2 mt-2">
+          <a class="text-sm font-medium text-primary" href="DetailService1.html">Temporary Staffing</a>
+          <a class="text-sm font-medium text-primary" href="DetailService2.html">Recruitment Process Outsourcing (RPO)</a>
+          <a class="text-sm font-medium text-primary" href="DetailService4.html">Pre-Placement Offer (PPO) Recruitment</a>
+          <a class="text-sm font-medium text-primary" href="DetailService6.html">Talent Mapping and Market Intelligence</a>
+          <a class="text-sm font-medium text-primary" href="DetailService3.html">Contract Staffing</a>
+          <a class="text-sm font-medium text-primary" href="DetailService5.html">HR Consulting and Strategy</a>
+        </div>
+      </div>
       <a href="industries.html" class="hover:text-primary">Industries</a>
       <a href="blog.html" class="hover:text-primary">Blog</a>
       <a href="#" class="px-6 py-3 bg-primary text-white rounded text-center hover:bg-primary/90">Contact</a>
@@ -290,15 +309,16 @@ function toggleMenu() {
 <ul class="space-y-4 text-zinc-500 text-sm">
 <li class="flex items-start gap-3">
 <span class="material-icons-round text-primary text-sm">location_on</span>
-<span class="text-zinc-400">122 Corporate Plaza, Silicon Square, NYC</span>
+<span class="text-zinc-400"> DD Puram(Deen Dayal Puram) Bareilly,<br/>
+  Uttar Pradesh 243122</span>
 </li>
 <li class="flex items-center gap-3">
 <span class="material-icons-round text-primary text-sm">email</span>
-<span class="text-zinc-400">hello@nsure.services</span>
+<span class="text-zinc-400">Suryansure@outlook.com</span>
 </li>
 <li class="flex items-center gap-3">
 <span class="material-icons-round text-primary text-sm">phone</span>
-<span class="text-zinc-400">+1 (555) 000-HR4U</span>
+<span class="text-zinc-400">+91 8171548322</span>
 </li>
 </ul>
 </div>

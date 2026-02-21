@@ -35,6 +35,23 @@
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
     </style>
 </head>
+<script>
+    function toggleMenu() {
+        const el = document.getElementById('mobileMenu');
+        if (!el) return;
+        el.classList.toggle('hidden');
+    }
+
+    function toggleSubmenu() {
+        const el = document.getElementById("mobileServicesSubmenu");
+        const btn = document.getElementById("mobileServicesToggleBtn");
+        const icon = document.getElementById("mobileServicesToggleIcon");
+        if (!el || !btn) return;
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        if (isOpen) { el.style.maxHeight = el.scrollHeight + 'px'; void el.offsetHeight; el.style.maxHeight = '0px'; btn.setAttribute('aria-expanded','false'); if(icon) icon.classList.remove('rotate-180'); el.addEventListener('transitionend', function h(){ el.classList.add('sr-only'); el.removeEventListener('transitionend', h); }); }
+        else { el.classList.remove('sr-only'); el.style.maxHeight = el.scrollHeight + 'px'; btn.setAttribute('aria-expanded','true'); if(icon) icon.classList.add('rotate-180'); el.addEventListener('transitionend', function h(){ el.style.maxHeight = ''; el.removeEventListener('transitionend', h); }); }
+    }
+</script>
 <body class="bg-white text-slate-900 font-display">
 <nav class="sticky top-0 z-50 w-full bg-white border-b border-slate-100">
 <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -67,6 +84,31 @@
 </div>
 </div>
 </nav>
+<!-- Mobile Menu trigger -->
+<div class="md:hidden px-6">
+    <button onclick="toggleMenu()" aria-label="Open menu" class="text-primary text-2xl">
+        <span class="material-symbols-outlined">menu</span>
+    </button>
+</div>
+<div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-lg">
+    <div class="flex flex-col p-6 space-y-4 text-sm font-semibold text-slate-700">
+        <a href="#" class="hover:text-primary">Home</a>
+        <a href="#" class="hover:text-primary">About</a>
+        <div>
+            <button id="mobileServicesToggleBtn" type="button" onclick="toggleSubmenu()" aria-expanded="false" aria-controls="mobileServicesSubmenu" class="w-full flex items-center justify-between text-sm font-medium text-slate-700">Services <span id="mobileServicesToggleIcon" class="material-symbols-outlined text-sm transform transition-transform duration-300">expand_more</span></button>
+            <div id="mobileServicesSubmenu" class="sr-only overflow-hidden transition-[max-height] duration-300 ease-in-out flex flex-col pl-4 space-y-2 mt-2">
+                <a class="text-sm font-medium text-primary" href="DetailService1.html">Temporary Staffing</a>
+                <a class="text-sm font-medium text-primary" href="DetailService2.html">Recruitment Process Outsourcing (RPO)</a>
+                <a class="text-sm font-medium text-primary" href="DetailService4.html">Pre-Placement Offer (PPO) Recruitment</a>
+                <a class="text-sm font-medium text-primary" href="DetailService6.html">Talent Mapping and Market Intelligence</a>
+                <a class="text-sm font-medium text-primary" href="DetailService3.html">Contract Staffing</a>
+                <a class="text-sm font-medium text-primary" href="DetailService5.html">HR Consulting and Strategy</a>
+            </div>
+        </div>
+        <a href="#" class="hover:text-primary">Careers</a>
+        <a href="#" class="px-6 py-3 bg-primary text-white rounded text-center hover:bg-primary/90">Contact</a>
+    </div>
+</div>
 <div class="max-w-7xl mx-auto px-6 pt-8">
 <a class="flex items-center gap-2 text-primary text-sm font-semibold hover:underline" href="#">
 <span class="material-symbols-outlined text-lg">arrow_back</span>

@@ -41,6 +41,42 @@
             -webkit-text-fill-color: transparent;
         }
     </style>
+    <script>
+        function toggleMenu() {
+            const el = document.getElementById('mobileMenu');
+            if (!el) return;
+            el.classList.toggle('hidden');
+        }
+
+        function toggleSubmenu() {
+            const el = document.getElementById("mobileServicesSubmenu");
+            const btn = document.getElementById("mobileServicesToggleBtn");
+            const icon = document.getElementById("mobileServicesToggleIcon");
+            if (!el || !btn) return;
+
+            const isOpen = btn.getAttribute('aria-expanded') === 'true';
+            if (isOpen) {
+                el.style.maxHeight = el.scrollHeight + 'px';
+                void el.offsetHeight;
+                el.style.maxHeight = '0px';
+                btn.setAttribute('aria-expanded', 'false');
+                if (icon) icon.classList.remove('rotate-180');
+                el.addEventListener('transitionend', function handler() {
+                    el.classList.add('sr-only');
+                    el.removeEventListener('transitionend', handler);
+                });
+            } else {
+                el.classList.remove('sr-only');
+                el.style.maxHeight = el.scrollHeight + 'px';
+                btn.setAttribute('aria-expanded', 'true');
+                if (icon) icon.classList.add('rotate-180');
+                el.addEventListener('transitionend', function handler() {
+                    el.style.maxHeight = '';
+                    el.removeEventListener('transitionend', handler);
+                });
+            }
+        }
+    </script>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-200">
 <header class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
@@ -75,7 +111,36 @@
                     Contact Us
                 </button>
 </nav>
+        <div class="flex items-center md:hidden">
+                <button onclick="toggleMenu()" aria-label="Open menu" class="text-slate-700 dark:text-slate-200 text-2xl">
+                        <span class="material-symbols-outlined">menu</span>
+                </button>
+        </div>
 </div>
+</div>
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+    <div class="flex flex-col p-6 space-y-4">
+        <a class="text-sm font-medium text-slate-700 dark:text-slate-200" href="#">Home</a>
+        <a class="text-sm font-medium text-slate-700 dark:text-slate-200" href="#">About Us</a>
+        <!-- Mobile Services with collapsible submenu -->
+        <div>
+            <button id="mobileServicesToggleBtn" type="button" onclick="toggleSubmenu()" aria-expanded="false" aria-controls="mobileServicesSubmenu" class="w-full flex items-center justify-between text-sm font-medium text-slate-700 dark:text-slate-200">
+                <span>Services</span>
+                <span id="mobileServicesToggleIcon" class="material-symbols-outlined text-sm transform transition-transform duration-300">expand_more</span>
+            </button>
+            <div id="mobileServicesSubmenu" class="sr-only overflow-hidden transition-[max-height] duration-300 ease-in-out flex flex-col pl-4 space-y-2 mt-2">
+                <a class="text-sm font-medium text-primary" href="DetailService1.html">Temporary Staffing</a>
+                <a class="text-sm font-medium text-primary" href="DetailService2.html">Recruitment Process Outsourcing (RPO)</a>
+                <a class="text-sm font-medium text-primary" href="DetailService4.html">Pre-Placement Offer (PPO) Recruitment</a>
+                <a class="text-sm font-medium text-primary" href="DetailService6.html">Talent Mapping and Market Intelligence</a>
+                <a class="text-sm font-medium text-primary" href="DetailService3.html">Contract Staffing</a>
+                <a class="text-sm font-medium text-primary" href="DetailService5.html">HR Consulting and Strategy</a>
+            </div>
+        </div>
+        <a class="text-sm font-medium text-slate-700 dark:text-slate-200" href="#">Careers</a>
+        <a class="text-sm font-medium text-slate-700 dark:text-slate-200" href="#">Contact</a>
+    </div>
 </div>
 </header>
 <main>
@@ -197,52 +262,7 @@
 </div>
 </div>
 </section>
-<section class="bg-slate-50 dark:bg-slate-900/30 py-24 border-y border-slate-200 dark:border-slate-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-16">
-<h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-4">Targeted Industries</h2>
-<p class="text-slate-600 dark:text-slate-400">Specialized market intelligence for diverse global sectors.</p>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-<div class="flex items-center space-x-4 p-8 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-all">
-<span class="material-symbols-outlined text-primary text-3xl">developer_mode</span>
-<span class="font-bold text-lg">IT &amp; Software</span>
-</div>
-<div class="flex items-center space-x-4 p-8 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-all">
-<span class="material-symbols-outlined text-primary text-3xl">account_balance_wallet</span>
-<span class="font-bold text-lg">BFSI</span>
-</div>
-<div class="flex items-center space-x-4 p-8 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-all">
-<span class="material-symbols-outlined text-primary text-3xl">medical_information</span>
-<span class="font-bold text-lg">Healthcare</span>
-</div>
-<div class="flex items-center space-x-4 p-8 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-all">
-<span class="material-symbols-outlined text-primary text-3xl">factory</span>
-<span class="font-bold text-lg">Manufacturing</span>
-</div>
-<div class="flex items-center space-x-4 p-8 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-all">
-<span class="material-symbols-outlined text-primary text-3xl">shopping_bag</span>
-<span class="font-bold text-lg">Retail &amp; E-commerce</span>
-</div>
-<div class="flex items-center space-x-4 p-8 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-all">
-<span class="material-symbols-outlined text-primary text-3xl">electric_bolt</span>
-<span class="font-bold text-lg">Energy &amp; Power</span>
-</div>
-<div class="flex items-center space-x-4 p-8 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-all">
-<span class="material-symbols-outlined text-primary text-3xl">science</span>
-<span class="font-bold text-lg">Pharma &amp; Biotech</span>
-</div>
-<div class="flex items-center space-x-4 p-8 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-all">
-<span class="material-symbols-outlined text-primary text-3xl">airport_shuttle</span>
-<span class="font-bold text-lg">Logistics</span>
-</div>
-<div class="flex items-center space-x-4 p-8 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-all">
-<span class="material-symbols-outlined text-primary text-3xl">school</span>
-<span class="font-bold text-lg">Education</span>
-</div>
-</div>
-</div>
-</section>
+
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 <div class="space-y-8">
