@@ -56,13 +56,12 @@
 <nav class="sticky top-0 z-50 w-full bg-white border-b border-slate-100">
 <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 <div class="flex items-center gap-2">
-<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white font-bold text-xl">N</div>
-<h2 class="text-xl font-extrabold tracking-tight text-charcoal">N Sure Services</h2>
+    <img src="Images/websiteLogo.png" alt="N Sure Services" class="h-20 w-auto"/>
 </div>
 <div class="hidden md:flex items-center gap-8">
-<a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="index.html">Home</a>
 <div class="relative group">
-<a class="text-sm font-medium text-primary flex items-center gap-2" href="#">Services
+<a class="text-sm font-medium text-primary flex items-center gap-2" href="services.html">Services
 <svg class="w-3 h-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
 </a>
 <div class="absolute left-0 w-72 bg-white rounded-lg shadow-lg hidden group-hover:block z-50">
@@ -76,11 +75,9 @@
 </div>
 </div>
 </div>
-<a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#">About Us</a>
-<a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#">Careers</a>
-<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg text-sm font-bold transition-all">
-                    Contact Us
-                </button>
+<a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="about.html">About Us</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="careers.html">Careers</a>
+<a class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg text-sm font-bold transition-all" href="contact.html">Contact Us</a>
 </div>
 </div>
 </nav>
@@ -92,8 +89,8 @@
 </div>
 <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-lg">
     <div class="flex flex-col p-6 space-y-4 text-sm font-semibold text-slate-700">
-        <a href="#" class="hover:text-primary">Home</a>
-        <a href="#" class="hover:text-primary">About</a>
+        <a href="index.html" class="hover:text-primary">Home</a>
+        <a href="about.html" class="hover:text-primary">About</a>
         <div>
             <button id="mobileServicesToggleBtn" type="button" onclick="toggleSubmenu()" aria-expanded="false" aria-controls="mobileServicesSubmenu" class="w-full flex items-center justify-between text-sm font-medium text-slate-700">Services <span id="mobileServicesToggleIcon" class="material-symbols-outlined text-sm transform transition-transform duration-300">expand_more</span></button>
             <div id="mobileServicesSubmenu" class="sr-only overflow-hidden transition-[max-height] duration-300 ease-in-out flex flex-col pl-4 space-y-2 mt-2">
@@ -105,12 +102,12 @@
                 <a class="text-sm font-medium text-primary" href="DetailService5.html">HR Consulting and Strategy</a>
             </div>
         </div>
-        <a href="#" class="hover:text-primary">Careers</a>
-        <a href="#" class="px-6 py-3 bg-primary text-white rounded text-center hover:bg-primary/90">Contact</a>
+        <a href="careers.html" class="hover:text-primary">Careers</a>
+        <a href="contact.html" class="px-6 py-3 bg-primary text-white rounded text-center hover:bg-primary/90">Contact</a>
     </div>
 </div>
 <div class="max-w-7xl mx-auto px-6 pt-8">
-<a class="flex items-center gap-2 text-primary text-sm font-semibold hover:underline" href="#">
+<a class="flex items-center gap-2 text-primary text-sm font-semibold hover:underline" href="services.html">
 <span class="material-symbols-outlined text-lg">arrow_back</span>
             Back to Services
         </a>
@@ -217,7 +214,7 @@
 <h2 class="text-3xl font-bold text-charcoal">Related HR Solutions</h2>
 <p class="text-slate-500 mt-2">Comprehensive services to support every stage of the talent lifecycle.</p>
 </div>
-<a class="text-primary font-bold text-sm hover:underline" href="#">View All Services</a>
+<a class="text-primary font-bold text-sm hover:underline" href="services.html">View All Services</a>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
 <div class="group border border-slate-100 rounded-xl overflow-hidden hover:shadow-lg transition-all">
@@ -324,16 +321,22 @@
 <h4 class="text-white font-bold mb-6">CONTACT INFO</h4>
 <div class="space-y-4">
 <div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-xl">location_on</span>
-<span class="text-sm">123 Business Avenue, Suite 500, Tech Park City, 110022</span>
+    <span class="material-symbols-outlined text-primary text-xl">location_on</span>
+    <span class="text-sm">Gaur City, Noida, Uttar Pradesh, India</span>
 </div>
 <div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-xl">call</span>
-<span class="text-sm">+1 (234) 567-890</span>
+    <span class="material-symbols-outlined text-primary text-xl">call</span>
+    <div class="flex flex-col">
+        <span class="text-sm"><a href="tel:+919582399531" class="hover:underline">+91 95823 99531</a></span>
+        <span class="text-sm"><a href="tel:+918171548322" class="hover:underline">+91 81715 48322</a></span>
+    </div>
 </div>
 <div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-xl">mail</span>
-<span class="text-sm">info@nsureservices.com</span>
+    <span class="material-symbols-outlined text-primary text-xl">mail</span>
+    <div class="flex flex-col">
+        <span class="text-sm"><a href="mailto:Suryansure@outlook.com" class="hover:underline">Suryansure@outlook.com</a></span>
+        <span class="text-sm"><a href="mailto:Swati.nsure1@gmail.com" class="hover:underline">Swati.nsure1@gmail.com</a></span>
+    </div>
 </div>
 </div>
 </div>
