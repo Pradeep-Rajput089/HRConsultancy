@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>N Sure Services - Our Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "charcoal": "#333333",
+                        "medium-grey": "#666666",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.25rem",
+                        "3xl": "1.75rem",
+                        "full": "9999px"
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+        }
+        .white-header {
+            background: rgba(255, 255, 255, 1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }.service-card-premium {
+            @apply bg-white transition-all duration-500 ease-out border border-zinc-200/60 p-10 rounded-3xl flex flex-col h-full;
+            box-shadow: 
+                0 4px 6px -1px rgba(0, 0, 0, 0.05), 
+                0 10px 15px -3px rgba(0, 0, 0, 0.05),
+                0 20px 25px -5px rgba(0, 0, 0, 0.03);
+        }
+        .service-card-premium:hover {
+            @apply border-primary/20;
+            transform: translateY(-10px);
+            box-shadow: 
+                0 20px 25px -5px rgba(0, 0, 0, 0.08), 
+                0 30px 50px -12px rgba(0, 0, 0, 0.12);
+        }
+        .icon-container-new {
+            @apply w-16 h-16 rounded-2xl bg-zinc-50 flex items-center justify-center mb-8 transition-all duration-300;
+        }
+        .service-card-premium:hover .icon-container-new {
+            @apply bg-blue-50;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .duotone-icon {
+            @apply text-4xl;
+            background: linear-gradient(135deg, #135bec 0%, #64748b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+    <script>
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('hidden');
+}
+</script>
+
+</head>
+<body class="bg-[#000000] text-white font-display selection:bg-primary selection:text-white">
+<header class="fixed top-0 w-full z-50 white-header">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <div class="w-10 h-10 bg-primary rounded flex items-center justify-center">
+        <span class="text-white font-bold text-xl">N</span>
+      </div>
+      <span class="text-xl font-bold tracking-tight text-black">Sure Services</span>
+    </div>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="text-sm font-medium text-black hover:text-primary transition-colors" href="index.html">Home</a>
+      <a class="text-sm font-medium text-black hover:text-primary transition-colors" href="about.html">About</a>
+      <div class="relative group">
+        <a class="text-sm font-medium text-primary relative after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-primary flex items-center gap-2" href="#">Services
+          <svg class="w-3 h-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </a>
+        <div class="absolute left-0 w-72 bg-white rounded-lg shadow-lg hidden group-hover:block z-50">
+          <div class="p-4 grid grid-cols-1 gap-2">
+          <a class="block text-sm text-gray-700 hover:text-accent-blue py-2" href="DetailService1.html">Temporary Staffing</a>
+          <a class="block text-sm text-gray-700 hover:text-accent-blue py-2" href="DetailService2.html">Recruitment Process Outsourcing (RPO)</a>
+          <a class="block text-sm text-gray-700 hover:text-accent-blue py-2" href="DetailService4.html">Pre-Placement Offer (PPO) Recruitment</a>
+          <a class="block text-sm text-gray-700 hover:text-accent-blue py-2" href="DetailService6.html">Talent Mapping and Market Intelligence</a>
+          <a class="block text-sm text-gray-700 hover:text-accent-blue py-2" href="DetailService3.html">Contract Staffing</a>
+          <a class="block text-sm text-gray-700 hover:text-accent-blue py-2" href="DetailService5.html">HR Consulting and Strategy</a>
+        </div>
+        </div>
+      </div>
+      <a class="text-sm font-medium text-black hover:text-primary transition-colors" href="industries.html">Industries</a>
+      <a class="text-sm font-medium text-black hover:text-primary transition-colors" href="blog.html">Blog</a>
+      <a class="px-6 py-2.5 bg-black text-white rounded-lg font-semibold text-sm hover:bg-zinc-800 transition-all active:scale-95" href="#">Contact</a>
+    </nav>
+
+    <!-- Hamburger Button -->
+    <button class="md:hidden text-black" onclick="toggleMenu()">
+      <span class="material-icons-round">menu</span>
+    </button>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-gray-200 shadow-lg">
+    <div class="px-6 pt-6 pb-3 border-b border-gray-200">
+      <h3 class="text-lg font-bold uppercase tracking-widest">Menu</h3>
+    </div>
+    <div class="flex flex-col p-6 space-y-4 text-sm font-semibold text-slate-700">
+      <a href="index.html" class="hover:text-primary">Home</a>
+      <a href="about.html" class="hover:text-primary">About</a>
+      <a href="#" class="text-primary font-bold">Services</a>
+      <a href="industries.html" class="hover:text-primary">Industries</a>
+      <a href="blog.html" class="hover:text-primary">Blog</a>
+      <a href="#" class="px-6 py-3 bg-primary text-white rounded text-center hover:bg-primary/90">Contact</a>
+    </div>
+  </div>
+</header>
+
+<section class="pt-48 pb-32 px-6 bg-black">
+<div class="max-w-4xl mx-auto text-center">
+<h1 class="text-5xl md:text-7xl font-bold mb-8 tracking-tight text-white">Our Services</h1>
+<p class="text-xl text-zinc-400 leading-relaxed max-w-2xl mx-auto">
+            Empowering business growth through strategic HR solutions and human-centric talent management tailored for the modern corporate landscape.
+        </p>
+</div>
+</section>
+<section class="py-24 px-6 bg-white">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<div class="service-card-premium group">
+<div class="icon-container-new">
+<span class="material-symbols-outlined duotone-icon">person_search</span>
+</div>
+<h3 class="text-2xl font-extrabold mb-4 text-charcoal tracking-tight">Talent Acquisition</h3>
+<p class="text-medium-grey leading-relaxed mb-8 flex-grow">Finding the right fit for your culture and specific technical needs using AI-driven sourcing and expert vetting.</p>
+<a class="inline-flex items-center text-primary font-bold text-sm hover:gap-2 transition-all" href="#">
+    Learn More <span class="material-symbols-outlined text-lg ml-1">chevron_right</span>
+</a>
+</div>
+<div class="service-card-premium group">
+<div class="icon-container-new">
+<span class="material-symbols-outlined duotone-icon">payments</span>
+</div>
+<h3 class="text-2xl font-extrabold mb-4 text-charcoal tracking-tight">Payroll Management</h3>
+<p class="text-medium-grey leading-relaxed mb-8 flex-grow">Seamlessly manage payroll, tax filings, and benefits administration with our automated and precise financial workflows.</p>
+<a class="inline-flex items-center text-primary font-bold text-sm hover:gap-2 transition-all" href="#">
+    Learn More <span class="material-symbols-outlined text-lg ml-1">chevron_right</span>
+</a>
+</div>
+<div class="service-card-premium group">
+<div class="icon-container-new">
+<span class="material-symbols-outlined duotone-icon">auto_stories</span>
+</div>
+<h3 class="text-2xl font-extrabold mb-4 text-charcoal tracking-tight">Employee Training</h3>
+<p class="text-medium-grey leading-relaxed mb-8 flex-grow">Enhancing your team's capabilities through specialized upskilling programs and leadership development workshops.</p>
+<a class="inline-flex items-center text-primary font-bold text-sm hover:gap-2 transition-all" href="#">
+    Learn More <span class="material-symbols-outlined text-lg ml-1">chevron_right</span>
+</a>
+</div>
+<div class="service-card-premium group">
+<div class="icon-container-new">
+<span class="material-symbols-outlined duotone-icon">monitoring</span>
+</div>
+<h3 class="text-2xl font-extrabold mb-4 text-charcoal tracking-tight">Performance Systems</h3>
+<p class="text-medium-grey leading-relaxed mb-8 flex-grow">Implement data-driven performance management cycles that motivate employees and align with company objectives.</p>
+<a class="inline-flex items-center text-primary font-bold text-sm hover:gap-2 transition-all" href="#">
+    Learn More <span class="material-symbols-outlined text-lg ml-1">chevron_right</span>
+</a>
+</div>
+<div class="service-card-premium group">
+<div class="icon-container-new">
+<span class="material-symbols-outlined duotone-icon">verified_user</span>
+</div>
+<h3 class="text-2xl font-extrabold mb-4 text-charcoal tracking-tight">Compliance &amp; Risk</h3>
+<p class="text-medium-grey leading-relaxed mb-8 flex-grow">Ensure your business stays ahead of regulatory changes and labor laws with our comprehensive audit systems.</p>
+<a class="inline-flex items-center text-primary font-bold text-sm hover:gap-2 transition-all" href="#">
+    Learn More <span class="material-symbols-outlined text-lg ml-1">chevron_right</span>
+</a>
+</div>
+<div class="service-card-premium group">
+<div class="icon-container-new">
+<span class="material-symbols-outlined duotone-icon">hub</span>
+</div>
+<h3 class="text-2xl font-extrabold mb-4 text-charcoal tracking-tight">HR Strategy</h3>
+<p class="text-medium-grey leading-relaxed mb-8 flex-grow">Long-term workforce planning and organizational design to scale your business efficiently and sustainably.</p>
+<a class="inline-flex items-center text-primary font-bold text-sm hover:gap-2 transition-all" href="#">
+    Learn More <span class="material-symbols-outlined text-lg ml-1">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-6 bg-black border-t border-white/10">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+<div class="group">
+<div class="text-6xl font-bold text-white mb-2 group-hover:text-primary transition-colors">500+</div>
+<div class="text-zinc-500 uppercase tracking-widest text-sm font-semibold">Placements</div>
+</div>
+<div class="group">
+<div class="text-6xl font-bold text-white mb-2 group-hover:text-primary transition-colors">150+</div>
+<div class="text-zinc-500 uppercase tracking-widest text-sm font-semibold">Corporate Clients</div>
+</div>
+<div class="group">
+<div class="text-6xl font-bold text-white mb-2 group-hover:text-primary transition-colors">15+</div>
+<div class="text-zinc-500 uppercase tracking-widest text-sm font-semibold">Years Experience</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-6 bg-white">
+<div class="max-w-5xl mx-auto text-center">
+<h2 class="text-4xl md:text-5xl font-bold text-black mb-10">Ready to optimize your workforce?</h2>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="px-8 py-4 bg-primary text-white rounded-lg font-bold text-lg hover:bg-black transition-all transform hover:scale-105" href="#">
+                Get a Free Consultation
+            </a>
+<a class="px-8 py-4 border-2 border-black text-black rounded-lg font-bold text-lg hover:bg-black hover:text-white transition-all" href="#">
+                View Case Studies
+            </a>
+</div>
+</div>
+</section>
+<footer class="bg-black border-t border-white/10 py-20 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="text-white font-bold text-lg">N</span>
+</div>
+<span class="text-lg font-bold text-white">Sure Services</span>
+</div>
+<p class="text-zinc-500 text-sm leading-relaxed mb-6">
+                Building the future of work through elite talent management and strategic HR infrastructure.
+            </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<img alt="LinkedIn" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWxcb8_aDVMcAeXfxzalCHkGVdL_ob1DP95ktF4Rd25CR43C_EMDI26JFzTK91EbsjnZSrQan2RVdlchSkaLGp9hO1cDmYLSkhSusg2SdD_b-0ZXyb4zasfXd8JKPd3zP7jBtFmtL-8YMAptSgY7ZsJ4sCGSItQQem3NzuVP1OoAByRAAatukSQ_8d_Tn3ubmU-5GnxIhL0qkiW0iLEovy1aHs75hjxIm2-BrpmxFC6wVz2bfsDTczTNm1A1v5rWpsUEJJNBQU1bUG"/>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<img alt="Twitter" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4SWBKGqqaKgP6XL5kaI8NGDs1HjVtlo7ktfSRzcUM2dytDhPDVDPcpk0fNc0m7hpt_sPuUrKaAYmGLJeljXJBusOq-XIVgZvcwaKqhnc5FK0cSbgCwYs0NyZei3OXq1FIarDq3aqd8a3WY4CuKapYE5dvX5IEnnNxDRfCF4aCSebSaegdpq4Jge7LWFuDUCED-XHFgGFDRJasLMvk1-5nxr9tDDK6VSOxoZ_kmImcJIO7sIMR3qUyDkFmquF1drEYJ2QotVls97VX"/>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<img alt="Facebook" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7IE4MTARo3DnXclBLJau29njjhRuYuSI7n8uCjlfWu2GFGLKeBInvUHt1LTANEZMmAfwrr9dFjwLDQnkCl0hKRP99vB1Goepb4cfWp9aT-FL8N-VEMAmj5Pay6sAyy-6BqAZSkn-7_VGiaedpQj4mM2d6iCKZxiRXIzWcJVAXUwGelp5-gP3gsD9XKG7eLOAem0ylIyS1mlUN7paPKh-EaNmn01d7g0XeGKYTLvthIcFb0eaXYrzJsUWgaxBi38jpshcZo_8o2H2h"/>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-white">Quick Links</h4>
+<ul class="space-y-4 text-zinc-500 text-sm">
+<li><a class="hover:text-primary transition-colors" href="about.html">Our History</a></li>
+<li><a class="hover:text-primary transition-colors" href="careers.html">Career Portal</a></li>
+<li><a class="hover:text-primary transition-colors" href="blog.html">Press & Media</a></li>
+<li><a class="hover:text-primary transition-colors" href="faq.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-white">Services</h4>
+<ul class="space-y-4 text-zinc-500 text-sm">
+<li><a class="hover:text-primary transition-colors" href="services.html">Recruitment</a></li>
+<li><a class="hover:text-primary transition-colors" href="services.html">HR Outsourcing</a></li>
+<li><a class="hover:text-primary transition-colors" href="services.html">Executive Search</a></li>
+<li><a class="hover:text-primary transition-colors" href="services.html">Skill Training</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-white">Contact Us</h4>
+<ul class="space-y-4 text-zinc-500 text-sm">
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-primary text-sm">location_on</span>
+<span class="text-zinc-400">122 Corporate Plaza, Silicon Square, NYC</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-icons-round text-primary text-sm">email</span>
+<span class="text-zinc-400">hello@nsure.services</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-icons-round text-primary text-sm">phone</span>
+<span class="text-zinc-400">+1 (555) 000-HR4U</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="w-full bg-white mt-20">
+<div class="max-w-7xl mx-auto py-8 text-center text-black text-xs font-semibold uppercase tracking-widest">
+            © 2026 N Sure Services HR Consultancy. All rights reserved.
+        </div>
+</div>
+</footer>
+
+</body></html>

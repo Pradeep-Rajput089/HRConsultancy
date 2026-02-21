@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>About Us | N Sure Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#135bec",
+            "background-light": "#ffffff",
+            "background-dark": "#000000",
+            "neutral-dark": "#111111",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"],
+            "serif": ["Playfair Display", "serif"],
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <script>
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("hidden");
+}
+</script>
+
+</head>
+
+<body class="bg-white text-gray-900 selection:bg-primary selection:text-white">
+  <nav class="fixed top-0 w-full z-50 border-b border-gray-100 bg-white/95 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+          <span class="text-white font-bold text-xl">N</span>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-black">Sure <span class="text-primary">Services</span></span>
+      </div>
+      <div class="hidden md:flex items-center space-x-10 text-sm font-medium tracking-wide uppercase">
+        <a class="text-gray-900 hover:text-primary transition-colors" href="index.html
+">Home</a>
+        <a class="text-primary" href="about.html
+">About Us</a>
+        <a class="text-gray-900 hover:text-primary transition-colors" href="services.html
+">Services</a>
+        <a class="text-gray-900 hover:text-primary transition-colors" href="careers.html
+">Careers</a>
+        <a class="px-5 py-2.5 bg-primary text-white rounded-lg hover:bg-blue-600 transition-all shadow-md shadow-primary/20"
+          href="#">Contact Us</a>
+      </div>
+ <button onclick="toggleMenu()" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1">
+  <span class="w-7 h-0.5 bg-black rounded"></span>
+  <span class="w-7 h-0.5 bg-black rounded"></span>
+  <span class="w-7 h-0.5 bg-black rounded"></span>
+</button>
+
+
+    </div>
+    <!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+  <div class="flex flex-col p-6 space-y-6 text-sm font-medium uppercase">
+    <a href="index.html" class="text-gray-900 hover:text-primary transition-colors">Home</a>
+    <a href="about.html" class="text-primary">About Us</a>
+    <a href="services.html" class="text-gray-900 hover:text-primary transition-colors">Services</a>
+    <a href="careers.html" class="text-gray-900 hover:text-primary transition-colors">Careers</a>
+    <a href="#" class="px-5 py-3 bg-primary text-white rounded-lg text-center hover:bg-blue-600 transition-all">Contact Us</a>
+  </div>
+</div>
+
+  </nav>
+  <header class="pt-48 pb-32 px-6 bg-black text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="font-serif text-6xl md:text-8xl mb-6 inline-block border-b border-white/20 pb-4">About Us</h1>
+      <p class="text-xl md:text-2xl text-blue-600 font-light max-w-2xl mx-auto">
+        Empowering Businesses Through Expert HR Solutions
+      </p>
+
+    </div>
+  </header>
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
+      <div>
+        <h2 class="text-primary uppercase tracking-[0.2em] text-sm font-bold mb-6">Our Vision &amp; Mission</h2>
+        <h3 class="text-4xl font-semibold leading-tight mb-8 text-black">Redefining human capital management for the
+          modern era.</h3>
+        <div class="space-y-6 text-gray-700 leading-relaxed text-lg">
+          <p>To be the catalyst that transforms how organizations interact with their talent, fostering environments
+            where both business and people thrive in harmony.</p>
+        </div>
+      </div>
+      <div class="flex flex-col justify-center">
+        <p class="text-gray-800 text-lg leading-relaxed mb-8 italic">
+          "Founded on the principles of excellence and trust, N Sure Services began as a small boutique consultancy.
+          Today, we stand as a beacon of innovation in HR strategy, helping global enterprises navigate the complexities
+          of talent acquisition and organizational design."
+        </p>
+        <div class="grid grid-cols-2 gap-8">
+          <div>
+            <h4 class="text-black font-bold mb-2">Integrity</h4>
+            <p class="text-sm text-gray-600">Unwavering ethical standards in every placement and strategy.</p>
+          </div>
+          <div>
+            <h4 class="text-black font-bold mb-2">Innovation</h4>
+            <p class="text-sm text-gray-600">Leveraging cutting-edge tech to streamline HR operations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-primary uppercase tracking-[0.2em] text-sm font-bold mb-4">Leadership Team</h2>
+        <h3 class="text-4xl font-semibold text-black">The Minds Behind Excellence</h3>
+      </div>
+      <div class="grid md:grid-cols-3 gap-12">
+        <div class="group text-center">
+          <div class="relative mb-6 inline-block">
+            <div
+              class="absolute inset-0 bg-primary/10 rounded-full scale-0 group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <img alt="Jane Doe"
+              class="w-48 h-48 rounded-full object-cover border-2 border-gray-100 group-hover:border-primary transition-colors grayscale hover:grayscale-0 duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLQhjuqeS4uD4JZxPawP0vh_PLDyvl_uYBdC_UzXODlWuI3sGT59tURT4KYMzpwmXlYi0v_umZ-wpda8zBW9bJSNYqkFmTe80xgSXik_v68Y8rxGse_kKBNLHpDADYhdLQQGLasWSbL02Bw7iCQBaQY8C4h67n0_VAXs3ALbSRpFT1BdXHMvVybKG1nXybVtsJLzwJhnMH5IBdcc02jgM0mIbyjhZ5Omkv7YBmCbjS4wlZi4LBeTZagGny1B6BZdj0CUfM6Ru1kCna" />
+          </div>
+          <h4 class="text-xl font-bold mb-1 text-black">Jane Doe</h4>
+          <p class="text-primary font-medium text-sm">Chief HR Strategist</p>
+        </div>
+        <div class="group text-center">
+          <div class="relative mb-6 inline-block">
+            <div
+              class="absolute inset-0 bg-primary/10 rounded-full scale-0 group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <img alt="Marcus Vane"
+              class="w-48 h-48 rounded-full object-cover border-2 border-gray-100 group-hover:border-primary transition-colors grayscale hover:grayscale-0 duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-IDp4EB4nvK34-dozKz74RtzEzfAebwnx4UzhJ3L_fWMHIkAY2Ahod727YTrfp791u0Nufe8FY5G9xZQchHyCCcmjOnB6-DP8tOD8n4oQFXFyms1_cp49kEBxVP5HnUVVxkkGO2rvWiacvQRjLfPm59H-0Mxb4DeY6iY8jKAxzvwLmEpUfaecRSIHhTlWGUyZGQ7AkZCjJb0Z8kQTC6wZB7ROtxshnxcPox4HSjITgtjbJ-FwpQyof45ZIPcNJIsHtJLsbZ8mQnD6" />
+          </div>
+          <h4 class="text-xl font-bold mb-1 text-black">Marcus Vane</h4>
+          <p class="text-primary font-medium text-sm">Lead Talent Acquisition</p>
+        </div>
+        <div class="group text-center">
+          <div class="relative mb-6 inline-block">
+            <div
+              class="absolute inset-0 bg-primary/10 rounded-full scale-0 group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <img alt="Sarah Chen"
+              class="w-48 h-48 rounded-full object-cover border-2 border-gray-100 group-hover:border-primary transition-colors grayscale hover:grayscale-0 duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA1o1HK0rj3R5KgZs7UVtatiE8NGOWwNOTnZoMrbz9BhSY7zGlbLQ0XQfZGfNq510AsGr-lXuIRY-H22B4nmwfbue0mP1E1ywKPyjqdda6QeisnH-o_BViYgBt-ftq0rZIOuw9oGjM5k8Y0h6MfgPWdKG7o2pX5WGcWAT-L3QJltu90CfhHxBUiLNz5o0g2IkRNNjDAYeAcehcn391fiC44rL6TMDoRxszSojuJRwXLs-5AsRtrfpV_65D2nBmJCMsjC33MnUHB6-b" />
+          </div>
+          <h4 class="text-xl font-bold mb-1 text-black">Sarah Chen</h4>
+          <p class="text-primary font-medium text-sm">Culture &amp; Operations Director</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-primary uppercase tracking-[0.2em] text-sm font-bold mb-4">Our Advantage</h2>
+        <h3 class="text-4xl font-semibold text-black">Why Businesses Trust Us</h3>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div
+          class="p-8 bg-black rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-[1.02] transition-transform">
+          <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-primary">verified</span>
+          </div>
+          <h4 class="text-xl font-bold mb-4 text-white">Experienced Consultants</h4>
+          <p class="text-gray-400">Our team brings decades of collective experience in global HR landscape and policy
+            making.</p>
+        </div>
+        <div
+          class="p-8 bg-black rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-[1.02] transition-transform">
+          <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-primary">psychology</span>
+          </div>
+          <h4 class="text-xl font-bold mb-4 text-white">Personalized Solutions</h4>
+          <p class="text-gray-400">We don't believe in one-size-fits-all. Every strategy is tailor-made for your
+            specific culture.</p>
+        </div>
+        <div
+          class="p-8 bg-black rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-[1.02] transition-transform">
+          <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-primary">bolt</span>
+          </div>
+          <h4 class="text-xl font-bold mb-4 text-white">Innovative Strategy</h4>
+          <p class="text-gray-400">Utilizing data analytics and modern psychology to predict and manage talent trends.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-24 px-6 bg-white overflow-hidden">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-20">
+        <h2 class="text-primary uppercase tracking-[0.2em] text-sm font-bold mb-4">Our Evolution</h2>
+        <h3 class="text-4xl font-semibold text-black">Key Milestones</h3>
+      </div>
+      <div class="relative">
+        <div
+          class="absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-gradient-to-b from-primary/0 via-gray-200 to-primary/0">
+        </div>
+        <div class="space-y-24 relative">
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-[45%] text-center md:text-right">
+              <h4 class="text-2xl font-bold text-black mb-2">Founded in 2010</h4>
+              <p class="text-gray-600">N Sure Services was established in a small downtown office with a big vision for
+                the HR industry.</p>
+            </div>
+            <div class="w-4 h-4 rounded-full bg-primary ring-4 ring-primary/10 z-10 my-4 md:my-0"></div>
+            <div class="md:w-[45%]"></div>
+          </div>
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-[45%]"></div>
+            <div class="w-4 h-4 rounded-full bg-primary ring-4 ring-primary/10 z-10 my-4 md:my-0"></div>
+            <div class="md:w-[45%] text-center md:text-left">
+              <h4 class="text-2xl font-bold text-black mb-2">100+ Clients Reached</h4>
+              <p class="text-gray-600">2018 marked our expansion into new markets, serving over 100 industry leaders
+                across the country.</p>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-[45%] text-center md:text-right">
+              <h4 class="text-2xl font-bold text-black mb-2">Global Expansion</h4>
+              <p class="text-gray-600">In 2024, we opened our first international offices, bringing our unique HR
+                methodology to the world stage.</p>
+            </div>
+            <div class="w-4 h-4 rounded-full bg-primary ring-4 ring-primary/10 z-10 my-4 md:my-0"></div>
+            <div class="md:w-[45%]"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-8 italic text-black">Ready to transform your workplace?</h2>
+      <p class="text-gray-600 text-lg mb-12">Join our journey and let's build the future of your company together.</p>
+      <a class="inline-block px-12 py-5 bg-black hover:bg-neutral-800 text-white font-bold rounded-xl transition-all hover:scale-105 active:scale-95 shadow-xl shadow-black/10"
+        href="#">
+        Join our journey
+      </a>
+    </div>
+  </section>
+  <footer class="bg-background-dark border-t border-white/10 py-20 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+
+      <!-- Logo + About -->
+      <div>
+        <div class="flex items-center gap-2 mb-6">
+          <div class="w-8 h-8 bg-white rounded flex items-center justify-center">
+            <span class="text-background-dark font-bold text-lg">N</span>
+          </div>
+          <span class="text-lg font-bold text-white uppercase">Sure Services</span>
+        </div>
+
+        <p class="text-white text-sm leading-relaxed mb-6">
+          Expert HR consultancy tailored for modern businesses. Helping you grow through your greatest asset: your
+          people.
+        </p>
+
+        <!-- Social Icons -->
+        <div class="flex gap-4">
+
+          <!-- LinkedIn -->
+          <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center transition-all hover:scale-110 hover:bg-[#0A66C2]"
+            href="#">
+            <i class="fa-brands fa-linkedin-in text-[#0A66C2] hover:text-white text-lg transition-colors"></i>
+          </a>
+
+          <!-- Twitter -->
+          <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center transition-all hover:scale-110 hover:bg-[#1DA1F2]"
+            href="#">
+            <i class="fa-brands fa-twitter text-[#1DA1F2] hover:text-white text-lg transition-colors"></i>
+          </a>
+
+          <!-- Gmail -->
+          <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center transition-all hover:scale-110 hover:bg-[#EA4335]"
+            href="#">
+            <i class="fa-solid fa-envelope text-[#EA4335] hover:text-white text-lg transition-colors"></i>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h4 class="font-bold mb-6 text-white">Company</h4>
+        <ul class="space-y-4 text-white text-sm">
+          <li><a class="hover:text-white transition-colors" href="about.html">About Us</a></li>
+          <li><a class="hover:text-white transition-colors" href="about.html">Our Team</a></li>
+          <li><a class="hover:text-white transition-colors" href="careers.html">Careers</a></li>
+          <li><a class="hover:text-white transition-colors" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h4 class="font-bold mb-6 text-white">Services</h4>
+        <ul class="space-y-4 text-white text-sm">
+          <li><a class="hover:text-white transition-colors" href="services.html">Talent Acquisition</a></li>
+          <li><a class="hover:text-white transition-colors" href="services.html">HR Strategy</a></li>
+          <li><a class="hover:text-white transition-colors" href="services.html">Payroll Outsourcing</a></li>
+          <li><a class="hover:text-white transition-colors" href="services.html">Compliance Audit</a></li>
+        </ul>
+      </div>
+
+      <!-- Office -->
+      <div>
+        <h4 class="font-bold mb-6 text-white">Office</h4>
+        <ul class="space-y-4 text-white text-sm">
+          <li>
+            123 Professional Way,<br />
+            Business District,<br />
+            Singapore 018960
+          </li>
+          <li class="text-white font-medium">
+            +1 (555) 000-1234
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom White Section -->
+    <div class="w-full bg-white mt-20">
+      <div
+        class="max-w-7xl mx-auto py-8 flex flex-col md:flex-row justify-between items-center gap-6 text-black text-xs font-semibold uppercase tracking-widest">
+
+        <p>© 2024 N Sure Services. All rights reserved.</p>
+
+        <div class="flex gap-8">
+          <a class="hover:text-accent-blue transition-colors" href="privacy.html">Privacy Policy</a>
+          <a class="hover:text-accent-blue transition-colors" href="terms.html">Terms of Service</a>
+          <a class="hover:text-accent-blue transition-colors" href="cookies.html">Cookie Policy</a>
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
